@@ -8,7 +8,7 @@ not part of the distribution.
 
 2024-04-10  Joseph Wright  <Joseph.Wright@latex-project.org>
 
-	* ltfilehook.dtx
+	* ltfilehook.dtx, ltshipout.dtx
 	  Correct mark-up for commands with no documentation
 
 2024-03-22  Yukai Chou <muzimuzhi@gmail.com>
