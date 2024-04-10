@@ -6,6 +6,10 @@ to completeness or accuracy and it contains some references to files that are
 not part of the distribution.
 ================================================================================
 
+2024-04-10  Joseph Wright  <Joseph.Wright@latex-project.org>
+
+	* ltfilehook.dtx
+	  Correct mark-up for commands with no documentation
 
 2024-03-22  Yukai Chou <muzimuzhi@gmail.com>
 	* ltfilehook.dtx
