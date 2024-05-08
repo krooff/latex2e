@@ -6,6 +6,10 @@ to completeness or accuracy and it contains some references to files that are
 not part of the distribution.
 ================================================================================
 
+2024-05-09 Joseph Wright  <Joseph.Wright@latex-project.org>
+	* ltkeys.dtx
+	Refactor class option code
+
 2024-04-24  Yukai Chou  <muzimuzhi@gmail.com>
    * lttextcomp.dtx
 	Load the 2018 version when rolling back prior to 2018-08-11 (gh/1333)
