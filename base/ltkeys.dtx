@@ -199,9 +199,9 @@
     \str_case:nnF {#1}
       {
         { global }
-          { \@@_scope:N \clist_gput_right:Ne }
+          { \@@_scope:N \clist_put_right:Ne }
         { local }
-          { \@@_scope:N \clist_gremove_all:Ne }
+          { \@@_scope:N \clist_remove_all:Ne }
       }
       {
         \msg_error:nnnn { keys }
@@ -212,7 +212,7 @@
   }
 \cs_new_protected:Npn \@@_scope:N #1
   {
-    #1 \g_@@_forced_global_clist
+    #1 \l_@@_forced_global_clist
       { \exp_after:wN \@@_scope:w \l_keys_path_str \s_@@_stop }
   }
 \cs_new:Npn \@@_scope:w #1 / #2 \s_@@_stop {#2}
@@ -228,19 +228,19 @@
 \cs_generate_variant:Nn \clist_put_right:Nn { Nv }
 %    \end{macrocode}
 %
-% \begin{macro}{\g_@@_class_only_clist}
+% \begin{macro}{\l_@@_class_only_clist}
 % \changes{v1.0n}{2024/05/09}{New variable}
 %   Used to track class-only options.
 %    \begin{macrocode}
-\clist_new:N \g_@@_class_only_clist
+\clist_new:N \l_@@_class_only_clist
 %    \end{macrocode}
 % \end{macro}
 %
-% \begin{macro}{\g_@@_forced_global_clist}
+% \begin{macro}{\l_@@_forced_global_clist}
 % \changes{v1.0n}{2024/05/09}{New variable}
 %   Used to force options to be global.
 %    \begin{macrocode}
-\clist_new:N \g_@@_forced_global_clist
+\clist_new:N \l_@@_forced_global_clist
 %    \end{macrocode}
 % \end{macro}
 %
@@ -387,7 +387,7 @@
     \keys_if_exist:nnTF {#3} {#1}
       {
         \@@_options_class:nn {#1} {#2}
-        \clist_gput_right:Nn \g_@@_class_only_clist {#1}
+        \clist_put_right:Nn \l_@@_class_only_clist {#1}
       }
       {
         \keys_if_exist:nnTF {#3} { unknown }
@@ -440,9 +440,9 @@
   {
     \keys_if_exist:nnT {#3} {#1}
       {
-        \clist_if_in:NnTF \g_@@_class_only_clist {#1}
+        \clist_if_in:NnTF \l_@@_class_only_clist {#1}
           {
-            \clist_if_in:NeT \g_@@_forced_global_clist { \tl_to_str:n {#1} }
+            \clist_if_in:NeT \l_@@_forced_global_clist { \tl_to_str:n {#1} }
               { \@@_options_package:nn {#1} {#2} }
           }
           { \@@_options_package:nn {#1} {#2} }
