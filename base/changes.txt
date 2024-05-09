@@ -9,6 +9,7 @@ not part of the distribution.
 2024-05-09 Joseph Wright  <Joseph.Wright@latex-project.org>
 	* ltkeys.dtx
 	Refactor class option code
+	Exclude class options from package processing
 
 2024-04-24  Yukai Chou  <muzimuzhi@gmail.com>
    * lttextcomp.dtx
