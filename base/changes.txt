@@ -7,7 +7,7 @@ not part of the distribution.
 ================================================================================
 
 2024-05-09 Joseph Wright  <Joseph.Wright@latex-project.org>
-	* ltkeys.dtx
+	* ltkeys.dtx, clsguide.tex
 	Refactor class option code
 	Exclude class options from package processing
 
